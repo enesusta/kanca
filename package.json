@@ -1,6 +1,6 @@
 {
   "name": "kanca",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Kanca is custom react hooks library.",
   "author": "enesusta",
   "license": "MIT",
@@ -18,7 +18,6 @@
   },
   "files": [
     "http/*",
-    "form/*",
     "util/*"
   ],
   "scripts": {
@@ -29,12 +28,10 @@
     "prepare": "yarn run build",
     "cov": "jest --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
-
   },
   "peerDependencies": {
     "env-cmd": "^10.1.0",
-    "react": "^16.9.0",
-    "rxjs": "6.6.0"
+    "react": "^17.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -54,6 +51,7 @@
     "babel-jest": "^26.1.0",
     "coveralls": "^3.1.0",
     "jest": "^26.1.0",
+    "minimist": "^1.2.6",
     "react": "^16.9.0",
     "react-test-renderer": "^16.13.1",
     "rollup": "^2.21.0",
@@ -61,6 +59,7 @@
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.19.2",
     "rxjs": "^6.6.0",
+    "terser": "^4.8.1",
     "ts-jest": "^26.1.4",
     "typescript": "^3.2.4"
   }
