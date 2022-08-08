@@ -113,7 +113,7 @@ Before using any hook, you should read its documentation!
 ## 🎨 Hooks
 
 - [useFetch](docs/useFetch.md)
-- [useObject](docs/useObject.md)
+- [useAuthFetch](docs/useAuthFetch.md)
 
 ## Made with
 
