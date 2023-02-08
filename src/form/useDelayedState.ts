@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-function useDelayedState(value: any, delay: number = 250) {
-  const [state, setState] = useState(value);
+function useDelayedState<T>(value: T, delay: number = 250) {
+  const [state, setState] = useState<T>(value);
 
   useEffect(() => {
     const timer = setTimeout(() => {

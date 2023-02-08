@@ -1,1 +1,6 @@
-export {default as useDocumentTitle} from './useDocumentTitle';
+import useDocumentTitle from "./useDocumentTitle";
+
+
+export {
+    useDocumentTitle
+}

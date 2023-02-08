@@ -1,7 +1,15 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from 'react';
 
-export default function useDocumentTitle(title: string) {
+const useDocumentTitle = (param: string) => {
+  const app = process.env.REACT_APP_NAME;
+  const initialTitle = app ? `${param} | ${app}` : param;
+  const [title, setTitle] = useState(initialTitle);
+
   useEffect(() => {
-    if (title) document.title = title;
-  }, [title]);
-}
+    if (param) document.title = title;
+  }, [param]);
+
+  return [title, setTitle];
+};
+
+export default useDocumentTitle;

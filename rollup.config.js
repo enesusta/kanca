@@ -1,12 +1,18 @@
 import typescript from "rollup-plugin-typescript2";
-//import commonjs from '@rollup/plugin-commonjs'
-import external from "rollup-plugin-peer-deps-external";
-import nodeResolve from "@rollup/plugin-node-resolve";
-import url from "@rollup/plugin-url";
-//import json from '@rollup/plugin-json';
+import alias from "@rollup/plugin-alias";
+import path from "path";
 import { terser } from "rollup-plugin-terser";
 
-import pkg from "./package.json";
+const projectRootDir = path.resolve(__dirname);
+const aliases = alias({
+  entries: [
+    { find: "~http", replacement: path.resolve(projectRootDir, "src/http") },
+    { find: "~util", replacement: path.resolve(projectRootDir, "src/util") },
+    { find: "~form", replacement: path.resolve(projectRootDir, "src/form") },
+  ],
+});
+
+import pkg from "./package.json" assert { type: "json" };
 
 export default [
   {
@@ -26,17 +32,15 @@ export default [
       },
     ],
     plugins: [
-      external(),
-      url({ exclude: ["**/*.svg"] }),
-      nodeResolve({ jsnext: true, preferBuiltins: true, browser: true }),
+      aliases,
       typescript({
-        rollupCommonJSResolveHack: true,
         clean: true,
         declaration: true,
         declarationDir: "dist",
       }),
       terser(),
     ],
+    external: ["react", "@mantine/nprogress", "axios"],
   },
   {
     input: "src/http/index.ts",
@@ -47,16 +51,15 @@ export default [
       },
     ],
     plugins: [
-      external(),
-      nodeResolve({ jsnext: true, preferBuiltins: true, browser: true }),
+      aliases,
       typescript({
-        rollupCommonJSResolveHack: true,
         clean: true,
         declaration: true,
         declarationDir: "http",
       }),
       terser(),
     ],
+    external: ["react", "@mantine/nprogress", "axios"],
   },
 
   {
@@ -68,14 +71,14 @@ export default [
       },
     ],
     plugins: [
-      external(),
+      aliases,
       typescript({
-        rollupCommonJSResolveHack: true,
         clean: true,
         declaration: true,
         declarationDir: "util",
       }),
       terser(),
     ],
+    external: ["react", "@mantine/nprogress", "axios"],
   },
 ];

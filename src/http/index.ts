@@ -1,2 +1,7 @@
-export {default as useAuthFetch} from './useAuthFetch';
-export {default as useFetch} from './useFetch';
+import useHttpGet from "./useHttpGet";
+import useHttpPatch from "./useHttpPatch";
+import useHttpPost from "./useHttpPost";
+import useHttpPut from "./useHttpPut";
+import HttpInterface from "./httpInterface";
+
+export { useHttpGet, useHttpPatch, useHttpPost, useHttpPut, HttpInterface };

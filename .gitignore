@@ -12,8 +12,8 @@ node_modules
 # builds
 build
 dist/
-http
-form
+# http
+# form
 util
 coverage
 .rpt2_cache
