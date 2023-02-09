@@ -31,10 +31,10 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "peerDependencies": {
-    "env-cmd": "^10.1.0",
-    "react": "^17.0.0",
+    "@mantine/nprogress": "6.0.0-alpha.5",
     "axios": "^1.2.1",
-    "@mantine/nprogress": "6.0.0-alpha.5"
+    "env-cmd": "^10.1.0",
+    "react": "^17.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -47,6 +47,7 @@
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@rollup/plugin-url": "^8.0.1",
     "@testing-library/react": "^13.4.0",
     "@testing-library/react-hooks": "^8.0.1",

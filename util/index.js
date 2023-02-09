@@ -1,0 +1,1 @@
+import{useState as t,useEffect as c}from"react";var n=function(n){var o=process.env.REACT_APP_NAME,r=o?"".concat(n," | ").concat(o):n,e=t(r),a=e[0],i=e[1];return c((function(){n&&(document.title=a)}),[n]),[a,i]};export{n as useDocumentTitle};

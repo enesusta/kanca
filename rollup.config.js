@@ -1,17 +1,8 @@
-import typescript from "rollup-plugin-typescript2";
-import alias from "@rollup/plugin-alias";
+import typescript from "@rollup/plugin-typescript";
 import path from "path";
 import { terser } from "rollup-plugin-terser";
 
 const projectRootDir = path.resolve(__dirname);
-const aliases = alias({
-  entries: [
-    { find: "~http", replacement: path.resolve(projectRootDir, "src/http") },
-    { find: "~util", replacement: path.resolve(projectRootDir, "src/util") },
-    { find: "~form", replacement: path.resolve(projectRootDir, "src/form") },
-  ],
-});
-
 import pkg from "./package.json" assert { type: "json" };
 
 export default [
@@ -32,11 +23,8 @@ export default [
       },
     ],
     plugins: [
-      aliases,
       typescript({
-        clean: true,
         declaration: true,
-        declarationDir: "dist",
       }),
       terser(),
     ],
@@ -51,9 +39,9 @@ export default [
       },
     ],
     plugins: [
-      aliases,
       typescript({
-        clean: true,
+        outDir: "http",
+        include: ["src/http/**"],
         declaration: true,
         declarationDir: "http",
       }),
@@ -61,7 +49,6 @@ export default [
     ],
     external: ["react", "@mantine/nprogress", "axios"],
   },
-
   {
     input: "src/util/index.ts",
     output: [
@@ -71,11 +58,30 @@ export default [
       },
     ],
     plugins: [
-      aliases,
       typescript({
-        clean: true,
+        include: "src/util/**",
         declaration: true,
         declarationDir: "util",
+        outDir: "util",
+      }),
+      terser(),
+    ],
+    external: ["react", "@mantine/nprogress", "axios"],
+  },
+  {
+    input: "src/form/index.ts",
+    output: [
+      {
+        dir: "form",
+        format: "es",
+      },
+    ],
+    plugins: [
+      typescript({
+        include: "src/form/**",
+        declaration: true,
+        declarationDir: "form",
+        outDir: "form",
       }),
       terser(),
     ],

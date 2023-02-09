@@ -1,6 +1,6 @@
 import { AxiosError } from "axios";
 import { useEffect, useState } from "react";
-import { patch } from "../services/HttpService";
+import { patch } from "./HttpService";
 import HttpInterface from "./httpInterface";
 
 function useHttpPut<T>(url: string, body: any): HttpInterface<T> {

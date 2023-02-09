@@ -1,6 +1,6 @@
 import { AxiosError } from "axios";
 import { useEffect, useState } from "react";
-import { get } from "../services/HttpService";
+import { get } from "./HttpService";
 import HttpInterface from "./httpInterface";
 
 function useHttpGet<T>(url: string): HttpInterface<T> {
