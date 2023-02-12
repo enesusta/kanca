@@ -1,6 +1,6 @@
 {
   "name": "kanca",
-  "version": "1.2.6",
+  "version": "1.2.8",
   "description": "Kanca is custom react hooks library for my own purposes.",
   "author": "enesusta",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "peerDependencies": {
-    "@mantine/nprogress": "6.0.0-alpha.5",
+    "@mantine/nprogress": "5.10.3",
     "axios": "^1.2.1",
     "env-cmd": "^10.1.0",
     "react": "^17.0.0"
