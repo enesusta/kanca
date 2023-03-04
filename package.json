@@ -1,6 +1,6 @@
 {
   "name": "kanca",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Kanca is custom react hooks library for my own purposes.",
   "author": "enesusta",
   "license": "MIT",
@@ -34,7 +34,9 @@
     "@mantine/nprogress": "5.10.3",
     "axios": "^1.2.1",
     "env-cmd": "^10.1.0",
-    "react": "^17.0.0"
+    "react": "^17.0.0",
+    "@types/lodash.debounce": "^4.0.7",
+    "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
