@@ -1,4 +1,3 @@
-import { useDocumentTitle } from "./util";
 import {
   useHttpGet,
   useHttpPatch,
@@ -8,6 +7,9 @@ import {
 } from "./http";
 
 import useDebouncedCallback, { DEBOUNCE_TYPE } from "./useDebouncedCallback";
+import useWindowDimensions from "./useWindowDimensions";
+import useBeforeUnload from "./useBeforeUnload";
+import useDocumentTitle from "./useDocumentTitle";
 
 export {
   useDebouncedCallback,
@@ -17,5 +19,7 @@ export {
   useHttpPost,
   useHttpPut,
   HttpInterface,
-  DEBOUNCE_TYPE
+  DEBOUNCE_TYPE,
+  useWindowDimensions,
+  useBeforeUnload,
 };

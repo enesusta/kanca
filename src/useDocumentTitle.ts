@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useDocumentTitle = (param: string) => {
   const app = process.env.REACT_APP_NAME;
