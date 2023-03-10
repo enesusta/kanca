@@ -50,25 +50,6 @@ export default [
     external: ["react", "@mantine/nprogress", "axios"],
   },
   {
-    input: "src/util/index.ts",
-    output: [
-      {
-        dir: "util",
-        format: "es",
-      },
-    ],
-    plugins: [
-      typescript({
-        include: "src/util/**",
-        declaration: true,
-        declarationDir: "util",
-        outDir: "util",
-      }),
-      terser(),
-    ],
-    external: ["react", "@mantine/nprogress", "axios"],
-  },
-  {
     input: "src/form/index.ts",
     output: [
       {
