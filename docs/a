@@ -1,0 +1,6 @@
+bundle exec jekyll serve
+Configuration file: /Users/enesusta/projects/kanca/docs/_config.yml
+            Source: /Users/enesusta/projects/kanca/docs
+       Destination: /Users/enesusta/projects/kanca/docs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
