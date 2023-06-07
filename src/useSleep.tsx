@@ -1,12 +1,8 @@
 import { useMemo } from 'react';
 
-interface UseSleepConfiguration {
-  throttle?: number;
-}
-
-const useSleep = ({ throttle }: UseSleepConfiguration) => {
+const useSleep = (throttle: number = 1000) => {
   const sleep = useMemo(() => {
-    return new Promise(resolve => setTimeout(resolve, throttle ?? 1000));
+    return new Promise(resolve => setTimeout(resolve, throttle));
   }, []);
 
   return sleep;
