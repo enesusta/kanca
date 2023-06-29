@@ -1,31 +1,26 @@
 import {
+  HttpInterface,
   useHttpGet,
   useHttpPatch,
   useHttpPost,
   useHttpPut,
-  HttpInterface,
 } from "./http";
 
-import useDebouncedCallback, { DEBOUNCE_TYPE } from "./useDebouncedCallback";
-import useWindowDimensions from "./useWindowDimensions";
-import useBeforeUnload from "./useBeforeUnload";
-import useDocumentTitle from "./useDocumentTitle";
 import useAutoAnimate from "./useAutoAnimate";
+import useBeforeUnload from "./useBeforeUnload";
+import useDebouncedCallback, { DEBOUNCE_TYPE } from "./useDebouncedCallback";
+import useDocumentTitle from "./useDocumentTitle";
 import useHttpParam from "./useHttpParam";
 import useHttpQuery from "./useHttpQuery";
+import useInfiniteMemo from "./useInfiniteMemo";
+import useWindowDimensions from "./useWindowDimensions";
 
 export {
-  useDebouncedCallback,
+  DEBOUNCE_TYPE, HttpInterface, useAutoAnimate, useBeforeUnload, useDebouncedCallback,
   useDocumentTitle,
-  useHttpGet,
-  useHttpPatch,
+  useHttpGet, useHttpParam, useHttpPatch,
   useHttpPost,
-  useHttpPut,
-  HttpInterface,
-  DEBOUNCE_TYPE,
-  useWindowDimensions,
-  useBeforeUnload,
-  useAutoAnimate,
-  useHttpParam,
-  useHttpQuery
+  useHttpPut, useHttpQuery,
+  useInfiniteMemo, useWindowDimensions
 };
+
