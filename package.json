@@ -1,6 +1,6 @@
 {
   "name": "kanca",
-  "version": "1.3.4",
+  "version": "1.3.6",
   "description": "Kanca is custom react hooks library for my own purposes.",
   "author": "enesusta",
   "license": "MIT",
@@ -19,10 +19,10 @@
   "files": [
     "dist/*",
     "http/*",
-    "form/*"
+    "router/*"
   ],
   "scripts": {
-    "clean": "rm -rf dist form http util",
+    "clean": "rm -rf dist http router",
     "test": "jest",
     "build": "yarn clean && rollup -c --bundleConfigAsCjs",
     "start": "rollup -c -w",
@@ -35,12 +35,12 @@
     "axios": "^1.2.1",
     "env-cmd": "^10.1.0",
     "react": "^17.0.0",
-    "@formkit/auto-animate": "^1.0.0-beta.6"
+    "@formkit/auto-animate": "^1.0.0-beta.6",
+    "react-router-dom": "^6.12.0"
   },
   "dependencies": {
     "@types/lodash.debounce": "^4.0.7",
-    "lodash.debounce": "^4.0.8",
-    "react-router-dom": "^6.12.0"
+    "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -75,5 +75,8 @@
     "terser": "^5.16.3",
     "ts-jest": "^29.0.5",
     "typescript": "^4.9.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

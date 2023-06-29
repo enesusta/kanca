@@ -50,22 +50,22 @@ export default [
     external: ["react", "@mantine/nprogress", "axios"],
   },
   {
-    input: "src/form/index.ts",
+    input: "src/router/index.ts",
     output: [
       {
-        dir: "form",
+        dir: "router",
         format: "es",
       },
     ],
     plugins: [
       typescript({
-        include: "src/form/**",
+        include: "src/router/**",
         declaration: true,
-        declarationDir: "form",
-        outDir: "form",
+        declarationDir: "router",
+        outDir: "router",
       }),
       terser(),
     ],
-    external: ["react", "@mantine/nprogress", "axios"],
+    external: ["react", "react-router-dom"],
   },
 ];
