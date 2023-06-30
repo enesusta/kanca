@@ -1,24 +1,24 @@
-import typescript from "@rollup/plugin-typescript";
-import path from "path";
-import { terser } from "rollup-plugin-terser";
+import typescript from '@rollup/plugin-typescript';
+import path from 'path';
+import { terser } from 'rollup-plugin-terser';
 
 const projectRootDir = path.resolve(__dirname);
-import pkg from "./package.json" assert { type: "json" };
+import pkg from './package.json' assert { type: 'json' };
 
 export default [
   {
-    input: "src/index.ts",
+    input: 'src/index.ts',
     output: [
       {
         file: pkg.main,
-        format: "cjs",
-        exports: "named",
+        format: 'cjs',
+        exports: 'named',
         sourcemap: true,
       },
       {
         file: pkg.module,
-        format: "es",
-        exports: "named",
+        format: 'es',
+        exports: 'named',
         sourcemap: true,
       },
     ],
@@ -28,44 +28,63 @@ export default [
       }),
       terser(),
     ],
-    external: ["react", "@mantine/nprogress", "axios"],
+    external: ['react', '@mantine/nprogress', 'axios'],
   },
   {
-    input: "src/http/index.ts",
+    input: 'src/http/index.ts',
     output: [
       {
-        dir: "http",
-        format: "es",
+        dir: 'http',
+        format: 'es',
       },
     ],
     plugins: [
       typescript({
-        outDir: "http",
-        include: ["src/http/**"],
+        outDir: 'http',
+        include: ['src/http/**'],
         declaration: true,
-        declarationDir: "http",
+        declarationDir: 'http',
       }),
       terser(),
     ],
-    external: ["react", "@mantine/nprogress", "axios"],
+    external: ['react', '@mantine/nprogress', 'axios'],
   },
   {
-    input: "src/router/index.ts",
+    input: 'src/router/index.ts',
     output: [
       {
-        dir: "router",
-        format: "es",
+        dir: 'router',
+        format: 'es',
       },
     ],
     plugins: [
       typescript({
-        include: "src/router/**",
+        include: 'src/router/**',
         declaration: true,
-        declarationDir: "router",
-        outDir: "router",
+        declarationDir: 'router',
+        outDir: 'router',
       }),
       terser(),
     ],
-    external: ["react", "react-router-dom"],
+    external: ['react', 'react-router-dom'],
+  },
+  {
+    input: 'src/text/index.ts',
+    output: [
+      {
+        dir: 'text',
+        format: 'es',
+      },
+    ],
+    plugins: [
+      typescript({
+        include: 'src/text/**',
+        declaration: true,
+        declarationDir: 'text',
+        outDir: 'text',
+      }),
+      terser(),
+    ],
+    external: ['react'],
   },
 ];
