@@ -13,6 +13,7 @@ import useDocumentTitle from "./useDocumentTitle";
 import useHttpParam from "./useHttpParam";
 import useHttpQuery from "./useHttpQuery";
 import useInfiniteMemo from "./useInfiniteMemo";
+import useSleep from "./useSleep";
 import useWindowDimensions from "./useWindowDimensions";
 
 export {
@@ -21,6 +22,6 @@ export {
   useHttpGet, useHttpParam, useHttpPatch,
   useHttpPost,
   useHttpPut, useHttpQuery,
-  useInfiniteMemo, useWindowDimensions
+  useInfiniteMemo, useSleep, useWindowDimensions
 };
 

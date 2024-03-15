@@ -1,2 +1,2 @@
-declare const useRouterForward: (step?: number) => () => any;
+declare const useRouterForward: (step?: number) => () => void;
 export default useRouterForward;

@@ -1,8 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
-import path from 'path';
 import { terser } from 'rollup-plugin-terser';
 
-const projectRootDir = path.resolve(__dirname);
 import pkg from './package.json' assert { type: 'json' };
 
 export default [
