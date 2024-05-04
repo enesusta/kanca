@@ -1,6 +1,6 @@
 {
   "name": "kanca",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Kanca is custom react hooks library for my own purposes.",
   "author": "enesusta",
   "license": "MIT",
@@ -31,12 +31,21 @@
     "cov": "jest --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
+  "peerDependencies": {
+    "@mantine/nprogress": "^7.5.0",
+    "axios": "^1.6.7",
+    "env-cmd": "^10.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@formkit/auto-animate": "^1.0.0-beta.6",
+    "react-router-dom": "^6.21.3"
+  },
   "dependencies": {
     "@types/lodash.debounce": "^4.0.9",
     "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^10.0.1",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@testing-library/react": "^15.0.6",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^29.5.12",

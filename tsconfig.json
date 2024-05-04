@@ -10,7 +10,8 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
     "resolveJsonModule": true,
-    "typeRoots": ["node_modules/@types", "src/types"]
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "declaration": true
   },
   "include": [
     "src"
