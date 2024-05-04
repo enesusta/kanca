@@ -1,5 +1,7 @@
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
+// import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser';
+import jsx from 'acorn-jsx';
 
 import pkg from './package.json' assert { type: 'json' };
 
@@ -23,6 +25,7 @@ export default [
     plugins: [
       typescript({
         declaration: true,
+        check: false
       }),
       terser(),
     ],
@@ -42,6 +45,7 @@ export default [
         include: ['src/http/**'],
         declaration: true,
         declarationDir: 'http',
+        check: false
       }),
       terser(),
     ],
@@ -61,6 +65,7 @@ export default [
         declaration: true,
         declarationDir: 'router',
         outDir: 'router',
+        check: false
       }),
       terser(),
     ],
@@ -80,6 +85,7 @@ export default [
         declaration: true,
         declarationDir: 'text',
         outDir: 'text',
+        check: false
       }),
       terser(),
     ],

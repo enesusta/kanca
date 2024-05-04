@@ -12,6 +12,7 @@ enum HttpMethod {
   POST,
   PUT,
   PATCH,
+  GET
 }
 
 export { HttpMethod };

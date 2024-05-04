@@ -1,1 +1,1 @@
-import{useNavigate as r}from"react-router-dom";var n=function(n){void 0===n&&(n=1);var t=r();return function(){return t(n)}},t=function(n){void 0===n&&(n=1);var t=1+~n,o=r();return function(){return o(t)}};export{n as useRouterForward,t as useRouterPrevious};
+import{useNavigate as r}from"react-router-dom";const t=(t=1)=>{const o=r();return()=>o(t)},o=(t=1)=>{const o=1+~t,e=r();return()=>e(o)};export{t as useRouterForward,o as useRouterPrevious};

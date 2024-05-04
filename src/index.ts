@@ -15,6 +15,7 @@ import useHttpQuery from "./useHttpQuery";
 import useInfiniteMemo from "./useInfiniteMemo";
 import useSleep from "./useSleep";
 import useWindowDimensions from "./useWindowDimensions";
+import { get, post, put, patch, head, del } from './http/HttpService'
 
 export {
   DEBOUNCE_TYPE, HttpInterface, useAutoAnimate, useBeforeUnload, useDebouncedCallback,
@@ -22,6 +23,7 @@ export {
   useHttpGet, useHttpParam, useHttpPatch,
   useHttpPost,
   useHttpPut, useHttpQuery,
-  useInfiniteMemo, useSleep, useWindowDimensions
+  useInfiniteMemo, useSleep, useWindowDimensions,
+  get, post, put, patch, head, del
 };
 
