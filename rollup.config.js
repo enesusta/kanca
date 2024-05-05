@@ -26,13 +26,6 @@ export default [
     plugins: [
       typescript({
         declaration: true,
-        // check: false,
-        // compilerOptions: {
-        //   declaration: true,
-        //   declarationDir: "./http",
-        //   declarationMap: true,
-        //   ...tsconfig
-        // }
       }),
       terser(),
     ],
@@ -52,12 +45,6 @@ export default [
         include: ['src/http/**'],
         declaration: true,
         declarationDir: 'http',
-        // compilerOptions: {
-        //   declaration: true,
-        //   declarationDir: "./http",
-        //   declarationMap: true,
-        //   ...tsconfig
-        // }
       }),
       terser(),
     ],
@@ -77,11 +64,6 @@ export default [
         declaration: true,
         declarationDir: 'router',
         outDir: 'router',
-        // compilerOptions: {
-        //   declaration: true,
-        //   declarationDir: "./router",
-        //   ...tsconfig
-        // }
       }),
       terser(),
     ],

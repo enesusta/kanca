@@ -4,6 +4,7 @@ import { sleep } from '../concurrency/thread.ts';
 
 async function get<Type>(url: string, throttle?: number): Promise<[Type, AxiosError]> {
   try {
+    console.log(completeNavigationProgress, startNavigationProgress)
     startNavigationProgress();
     throttle && (await sleep(throttle));
     const { data } = await axios.get<Type>(url);
@@ -55,7 +56,6 @@ async function patch<Type>(url: string, body?: any): Promise<[Type, AxiosError]>
   startNavigationProgress();
   try {
     const { data } = body ? await axios.patch<Type>(url, body) : await axios.patch<Type>(url);
-
     completeNavigationProgress();
     return Promise.resolve([data, null]);
   } catch (e) {
