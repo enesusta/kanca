@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import debounce from "lodash.debounce";
+import { useCallback, useEffect, useState } from "react";
 
-export default function useWindowDimensions() {
+export default function useWindowDimensions(throttle: number = 300, dependencies?: []) {
   const hasWindow = typeof window !== "undefined";
 
   function getWindowDimensions() {
@@ -12,9 +13,9 @@ export default function useWindowDimensions() {
     };
   }
 
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+  const debounceChangeHandler = useCallback(debounce(handleResize, throttle), dependencies ?? [])
+
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   function handleResize() {
     setWindowDimensions(getWindowDimensions());
@@ -22,8 +23,8 @@ export default function useWindowDimensions() {
 
   useEffect(() => {
     if (hasWindow) {
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+      window.addEventListener("resize", debounceChangeHandler);
+      return () => window.removeEventListener("resize", debounceChangeHandler);
     }
   }, [hasWindow]);
 

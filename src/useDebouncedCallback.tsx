@@ -26,4 +26,4 @@ function useDebouncedCallback<T>(
   return debounceChangeHandler;
 }
 
-export default useDebouncedCallback;
+export default useDebouncedCallback
