@@ -32,11 +32,11 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@formkit/auto-animate": "^0.7.0",
     "@mantine/nprogress": "^7.6.2",
     "axios": "^1.6.7",
-    "@formkit/auto-animate": "^0.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3"
   },
   "dependencies": {
@@ -44,6 +44,7 @@
     "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@testing-library/react": "^15.0.6",
     "@testing-library/react-hooks": "^8.0.1",
@@ -57,7 +58,6 @@
     "react": "^18.3.1",
     "react-test-renderer": "^18.3.1",
     "rollup": "^4.17.2",
-    "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^4.9.5"
   },

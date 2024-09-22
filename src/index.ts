@@ -15,15 +15,40 @@ import useHttpQuery from "./useHttpQuery";
 import useInfiniteMemo from "./useInfiniteMemo";
 import useSleep from "./useSleep";
 import useWindowDimensions from "./useWindowDimensions";
+import useParentDimensions from "./useParentDimensions";
+import useScrollIntoView from "./useScrollIntoView";
+import { useRouter } from "./router";
+import { useRouterForward } from "./router";
+import { useRouterPrevious } from "./router";
+
 import { get, post, put, patch, head, del } from './http/HttpService'
 
 export {
-  DEBOUNCE_TYPE, HttpInterface, useAutoAnimate, useBeforeUnload, useDebouncedCallback,
+  DEBOUNCE_TYPE,
+  HttpInterface,
+  useAutoAnimate,
+  useBeforeUnload,
+  useDebouncedCallback,
   useDocumentTitle,
-  useHttpGet, useHttpParam, useHttpPatch,
+  useHttpGet,
+  useHttpParam,
+  useHttpPatch,
   useHttpPost,
-  useHttpPut, useHttpQuery,
-  useInfiniteMemo, useSleep, useWindowDimensions,
-  get, post, put, patch, head, del
+  useHttpPut,
+  useHttpQuery,
+  useInfiniteMemo,
+  useSleep,
+  useWindowDimensions,
+  useParentDimensions,
+  useScrollIntoView,
+  useRouterPrevious,
+  useRouterForward,
+  useRouter,
+  get,
+  post,
+  put,
+  patch,
+  head,
+  del
 };
 

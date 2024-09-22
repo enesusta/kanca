@@ -1,6 +1,7 @@
 // import typescript from 'rollup-plugin-typescript2';
 import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
+// import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import jsx from 'acorn-jsx';
 
 import pkg from './package.json' assert { type: 'json' };

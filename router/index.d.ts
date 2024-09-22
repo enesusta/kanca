@@ -1,3 +1,4 @@
 import useRouterForward from './useRouterForward';
 import useRouterPrevious from './useRouterPrevious';
-export { useRouterForward, useRouterPrevious };
+import useRouter from './useRouter';
+export { useRouterForward, useRouterPrevious, useRouter };
